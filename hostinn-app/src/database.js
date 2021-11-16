@@ -8,18 +8,18 @@ const db = mysql.createPool(database);
 db.getConnection((err, connection) => {
     if (err) {
       if (err.code === 'PROTOCOL_CONNECTION_LOST') {
-        console.error('Database connection was closed.');
+        console.error('Conexión a la base de datos cerrada.');
       }
       if (err.code === 'ER_CON_COUNT_ERROR') {
-        console.error('Database has to many connections');
+        console.error('Error en la cantidad de conexiones');
       }
       if (err.code === 'ECONNREFUSED') {
-        console.error('Database connection was refused');
+        console.error('Conexión a la base de datos rechazada');
       }
     }
   
     if (connection) connection.release();
-    console.log('DB is Connected');
+    console.log('Base de datos conectada');
   
     return;
 });
