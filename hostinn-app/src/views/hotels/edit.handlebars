@@ -1,0 +1,32 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4 mx-auto">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/hotels/editHotel/{{hotel.idHotel}}" method="POST">
+                        <div class="form-group">
+                            <input type="text" value="{{hotel.nombre}}" class="form-control" name="name" placeholder="Nombre" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{hotel.descripcion}}" name="description" rows="2" class="form-control" placeholder="Descripción">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{hotel.ubicacion}}" name="location" class="form-control" placeholder="Ubicación">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{hotel.facilidades}}" name="facilities" rows="2" class="form-control" placeholder="Facilidades">
+                        </div>
+                        <div class="form-group">
+                            <input type="text" value="{{hotel.descripcionInstalaciones}}" name="placeDescription" rows="2" class="form-control" placeholder="Descripción de las instalaciones">
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Editar Hotel                                    
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
